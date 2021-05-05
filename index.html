@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible">
+    <title>Shopping Cart List</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+</head>
+
+<body>
+    <ion-app>
+       
+            <ion-header>
+                <ion-toolbar color="primary">
+                    <ion-title class="ion-padding">Shopping Cart List</ion-title>
+                </ion-toolbar>
+            </ion-header>
+       
+        <ion-content>
+            <ion-grid>
+                <ion-row>
+                    <ion-col size-md="3" offset-md="6">
+                        <ion-title class="ion-padding">New item</ion-title>
+                    </ion-col>
+                    <ion-col size-md="3" offset-md="6">
+                        <ion-title class="ion-padding">My Saldo: </ion-title>
+                    </ion-col>
+                    <ion-col>
+                        <ion-item id="saldo"></ion-item>
+                    </ion-col>
+                </ion-row>
+                    <ion-item>
+                        <ion-label position="floating" class="ion-padding">Item</ion-label>
+                        <ion-input type="text" placeholder="Item" id="item"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label position="floating" class="ion-padding">Price</ion-label>
+                        <ion-input type="number" placeholder="Price" id="price"></ion-input>
+                    </ion-item>
+                    <ion-button class="ion-margin" id="add_btn">
+                        <ion-icon slot="start" name="add"></ion-icon>
+                        Add to cart
+                    </ion-button>
+                    
+                    <ion-button class="ion-margin" color="warning" id="clear_btn">
+                        <ion-icon slot="start" name="close-outline"></ion-icon>
+                        Clear
+                    </ion-button>
+                </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <ion-list id="items_list"></ion-list>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <ion-item id="expense_output"></ion-item>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-content>
+        <ion-alert-controller></ion-alert-controller>
+        <ion-footer>
+            <ion-toolbar>
+                <ion-button size="small" fill="outline" a href="./welcome.html">Welcome</ion-button>
+                <ion-button size="small" fill="outline" a href="./index.html">Shopping Cart</ion-button>
+                <ion-button size="small" fill="outline" a href="./about.html">About</ion-button>
+            </ion-toolbar>
+          </ion-footer>
+    </ion-app>
+    <script src="index.js"></script>
+</body>
+</html>
